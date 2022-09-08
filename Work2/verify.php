@@ -20,9 +20,17 @@ $pass = $_POST['pass'];
     <hr><br>
 
     <div id="headTop">
-        <?php echo "เข้าสู่ระบบด้วย <br>"; ?>
-        <?php echo "Login = $user <br>"; ?>
-        <?php echo "Password = $pass"; ?>
+        <?php
+        if ($user == "admin" && $pass == "ad1234") {
+            echo "ยินดีต้อนรับคุณ ADMIN <br>";
+        } elseif ($user == "member" && $pass == "mem1234") {
+            echo "ยินดีต้อนรับคุณ MEMBER <br>";
+        } else {
+            echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง <br>";
+        }
+
+        ?>
+            <a href="index.php">กลับไปยังหน้าหลัก</a>
     </div>
 
 </body>

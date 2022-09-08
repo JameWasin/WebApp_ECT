@@ -17,7 +17,16 @@ $numPost = $_GET['id'];
     <h1 id="headTop">Webboard KakKak</h1>
     <hr>
     <div id="headTop">
-        <?php echo "ต้องการดูกระทู้หมายเลข $numPost <br><br>"; ?>
+        <?php 
+        echo "ต้องการดูกระทู้หมายเลข $numPost <br>"; 
+        if($numPost%2 == 0){
+            echo "เป็นกระทู้หมายเลขคู่ <br><br>"; 
+        }
+        else{
+            echo "เป็นกระทู้หมายเลขคี่ <br><br>"; 
+        }
+        
+        ?>
         <table id="loginTable">
             <tr>
                 <td id="tableHead">แสดงความคิดเห็น</td>
@@ -31,7 +40,7 @@ $numPost = $_GET['id'];
         </table>
     </div><br>
     <div id="headTop">
-        <a href="index.html">กลับไปหน้าหลัก</a>
+        <a href="index.php">กลับไปหน้าหลัก</a>
     </div>
 </body>
 
