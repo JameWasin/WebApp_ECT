@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['id'])){
+    header("location:index.php");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +39,7 @@
     </table></form><br>
     <div id="headTop">
         ถ้ายังไม่ได้เป็นสมาชิก
-        <a href="register.html">กรุณาสมัครสมาชิก</a>
+        <a href="register.php">กรุณาสมัครสมาชิก</a>
     </div>
 
 </body>
