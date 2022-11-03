@@ -22,7 +22,7 @@ if(!isset($_SESSION['id'])){
         <div class="dropdown">
             <a type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" 
                 id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-lines-fill"></i> <?php echo $_SESSION['username']?>
+                <i class="bi bi-person-lines-fill"></i> <?php echo $_SESSION["username"]?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown1">
                 <li><a href="logout.php" class="dropdown-item"><i class="bi bi-power"></i> ออกจากระบบ</a></li>
